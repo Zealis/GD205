@@ -7,11 +7,26 @@ public class W2Board : MonoBehaviour
     public GameObject player;
     Vector3 initPos;
     public Transform[]hazard;
+    public AudioSource ufoSource { get; private set; }
+    public AudioSource ufo;
+    public GameObject colorcChangeTile;
+    
+    
+
+    
+
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
         initPos = player.transform.position;
+        ufoSource = GetComponent<AudioSource>();
+        
+        
+        
+
 
 
     }
@@ -55,11 +70,19 @@ public class W2Board : MonoBehaviour
             if (hazard[i].position == player.transform.position)
             {
 
-                player.transform.position = initPos;
+                player.transform.position = initPos; ufoSource.Play();
+
             }
 
 
         }
+
+        if (colorcChangeTile.transform.position == player.transform.position)
+        {
+            colorcChangeTile.GetComponent<Renderer>().material.color = Color.blue;
+        }
+
+
 
 
     }
