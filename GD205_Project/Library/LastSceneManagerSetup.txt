@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Save.unity
+- path: Assets/GD205_ProjectandMainMenu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
