@@ -6,6 +6,7 @@ public class Thrust : MonoBehaviour
 {
     Rigidbody rb;
     public GameObject victim;
+    public GameObject anothervictim;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +19,7 @@ public class Thrust : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.AddForce(transform.forward * 5f);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb.AddForce(transform.forward * -5f);
-
-        }
+       
     }
 
     void OnCollisionEnter(Collision myCollision)
@@ -36,5 +29,8 @@ public class Thrust : MonoBehaviour
             Destroy(victim);
         }
 
+        if(myCollision.gameObject == anothervictim){
+            Destroy(anothervictim);
+        }
     }
 }
