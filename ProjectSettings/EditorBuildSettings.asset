@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/SpeedTutor_Full_Menu_System/Scenes/Level1_Demo.unity
     guid: a29848c6cbdc245439fd7641ab34b8bc
   - enabled: 1
-    path: Assets/GD205_UnityProject.unity
+    path: Assets/Scenes/GD205_UnityProject.unity
     guid: 8b7a5b7480d9e4d2eb9ee6b8341d1b95
   m_configObjects: {}
